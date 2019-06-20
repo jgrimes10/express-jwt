@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a86f8ed8-838e-4ef8-b6fd-88f4747e98a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/routes/user.route.js" afterDir="false" />
+    <list default="true" id="a86f8ed8-838e-4ef8-b6fd-88f4747e98a3" name="Default Changelist" comment="Add jwt to signin method. Add a get all users route that is verified by jwt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.route.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/user.route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="54" column="3" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+            <state relative-caret-position="166">
+              <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -138,7 +135,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561036907125</updated>
-      <workItem from="1561036908405" duration="3054000" />
+      <workItem from="1561036908405" duration="4383000" />
     </task>
     <task id="LOCAL-00001" summary="Add basic server.js file. Add dependencies.">
       <created>1561037304896</created>
@@ -161,11 +158,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561039225016</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add timestamps to model. Add user route with new user and signin support. Add bcrypt">
+      <created>1561040790476</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1561040790476</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3054000" />
+    <option name="totallyTimeSpent" value="4383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -178,7 +182,7 @@
       <window_info anchor="bottom" id="Version Control" weight="0.32998884" />
       <window_info anchor="bottom" id="Terminal" weight="0.32998884" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32998884" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32998884" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32998884" />
@@ -200,7 +204,9 @@
     <MESSAGE value="Add .env variable support, update PORT to env variable" />
     <MESSAGE value="Add user model. Use urlencoded support for requests" />
     <MESSAGE value="Add user model. Use urlencoded support for requests. Connect to DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add user model. Use urlencoded support for requests. Connect to DB" />
+    <MESSAGE value="Add timestamps to model. Add user route with new user and signin support. Add bcrypt" />
+    <MESSAGE value="Add jwt to signin method. Add a get all users route that is verified by jwt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add jwt to signin method. Add a get all users route that is verified by jwt" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -243,8 +249,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/user.route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="54" column="3" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+        <state relative-caret-position="166">
+          <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
         </state>
       </provider>
     </entry>

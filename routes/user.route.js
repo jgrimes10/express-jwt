@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const User = require('../models/user.model');
 
 router.post('/', (req, res) => {
@@ -37,8 +38,17 @@ router.post('/signin', (req, res) => {
                     });
                 }
                 if (result) {
+                    const JWTToken = jwt.sign({
+                            email: user.email,
+                            _id: user._id
+                        },
+                        'secret',
+                        {
+                            expiresIn: '2h'
+                        });
                     return res.status(200).json({
-                        success: 'Welcome to the JWT Auth'
+                        success: 'Welcome to the JWT Auth',
+                        token: JWTToken
                     });
                 }
 
@@ -52,6 +62,28 @@ router.post('/signin', (req, res) => {
                 error: err
             });
         });
+});
+
+router.get('/', (req, res) => {
+    if (!req.body.token) {
+        return res.status(401).json({
+            failed: 'Unauthorized Access'
+        });
+    }
+
+    jwt.verify(req.body.token, 'secret', (err) => {
+        if (err) {
+            return res.status(500).send(err);
+        }
+
+        User.find({}, (error, users) => {
+            if (error) {
+                return res.status(500).send(error);
+            }
+
+            return res.status(200).send(users);
+        });
+    });
 });
 
 module.exports = router;
