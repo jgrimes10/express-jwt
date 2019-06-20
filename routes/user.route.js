@@ -42,7 +42,7 @@ router.post('/signin', (req, res) => {
                             email: user.email,
                             _id: user._id
                         },
-                        'secret',
+                        process.env.JWT_SECRET,
                         {
                             expiresIn: '2h'
                         });
@@ -71,7 +71,7 @@ router.get('/', (req, res) => {
         });
     }
 
-    jwt.verify(req.body.token, 'secret', (err) => {
+    jwt.verify(req.body.token, process.env.JWT_SECRET, (err) => {
         if (err) {
             return res.status(500).send(err);
         }
