@@ -5,9 +5,20 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+// set up db connection
+mongoose.connect(process.env.DB_URL)
+    .then(() => {
+        console.log('Successfully connected to DB');
+    })
+    .catch(err => {
+        console.log(err);
+    });
 
 // set up middleware
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 // set up routes
 app.get('/checking', (req, res) => {
