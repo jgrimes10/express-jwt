@@ -21,6 +21,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // set up routes
+const userRoute = require('./routes/user.route');
+
+app.use('/api/users', userRoute);
+
 app.get('/checking', (req, res) => {
     res.json({
         "Tutorial": "Welcome to the Node express JWT Tutorial"
