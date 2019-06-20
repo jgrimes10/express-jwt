@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a86f8ed8-838e-4ef8-b6fd-88f4747e98a3" name="Default Changelist" comment="Add jwt to signin method. Add a get all users route that is verified by jwt">
+    <list default="true" id="a86f8ed8-838e-4ef8-b6fd-88f4747e98a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.route.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/user.route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+            <state relative-caret-position="326">
+              <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -42,9 +41,9 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/models/user.model.js" />
+        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/routes/user.route.js" />
       </list>
     </option>
@@ -135,7 +134,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561036907125</updated>
-      <workItem from="1561036908405" duration="4383000" />
+      <workItem from="1561036908405" duration="5257000" />
     </task>
     <task id="LOCAL-00001" summary="Add basic server.js file. Add dependencies.">
       <created>1561037304896</created>
@@ -165,24 +164,37 @@
       <option name="project" value="LOCAL" />
       <updated>1561040790476</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add jwt to signin method. Add a get all users route that is verified by jwt">
+      <created>1561042120349</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1561042120349</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Convert 'secret' to .env variable">
+      <created>1561042345213</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1561042345213</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4383000" />
+    <option name="totallyTimeSpent" value="5257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25026342" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32998884" />
+      <window_info active="true" anchor="bottom" id="Version Control" visible="true" weight="0.32998884" />
       <window_info anchor="bottom" id="Terminal" weight="0.32998884" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32998884" />
+      <window_info anchor="bottom" id="Messages" weight="0.32998884" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32998884" />
@@ -206,7 +218,8 @@
     <MESSAGE value="Add user model. Use urlencoded support for requests. Connect to DB" />
     <MESSAGE value="Add timestamps to model. Add user route with new user and signin support. Add bcrypt" />
     <MESSAGE value="Add jwt to signin method. Add a get all users route that is verified by jwt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add jwt to signin method. Add a get all users route that is verified by jwt" />
+    <MESSAGE value="Convert 'secret' to .env variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert 'secret' to .env variable" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -226,13 +239,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -247,10 +253,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="73" selection-start-line="2" selection-start-column="73" selection-end-line="2" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/user.route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+        <state relative-caret-position="326">
+          <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
         </state>
       </provider>
     </entry>
